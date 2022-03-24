@@ -1,0 +1,19 @@
+mv-tablist {
+  display: flex;
+}
+
+mv-tab {
+  padding: 3px 5px;
+}
+mv-tab:hover {
+  cursor: pointer;
+  color: #0000f1;
+}
+mv-tab[selected] {
+  color: #551aa9;
+  border-bottom: 2px solid #551aa9;
+}
+
+mv-tabpanel:not([hidden]) {
+  display: block;
+}
