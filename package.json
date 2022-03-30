@@ -1,6 +1,6 @@
 {
   "name": "mv-tabs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "custom tabs",
   "main": "./dist/bundle.js",
   "scripts": {
