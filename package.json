@@ -1,6 +1,6 @@
 {
   "name": "mv-tabs",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "custom tabs",
   "main": "./dist/bundle.js",
   "scripts": {
@@ -11,13 +11,13 @@
     "tabs",
     "customElement"
   ],
-  "author": "MaksPopov",
+  "author": "MaksBurov",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "directory": "https://github.com/PopovMaksim/mv-tabs"
+    "directory": "https://github.com/MaksBurov/mv-tabs"
   },
-  "homepage": "https://github.com/PopovMaksim/mv-tabs",
+  "homepage": "https://github.com/MaksBurov/mv-tabs",
   "devDependencies": {
     "css-loader": "^6.6.0",
     "style-loader": "^3.3.1",

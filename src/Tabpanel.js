@@ -4,11 +4,15 @@ export default class Tabpanel extends HTMLElement {
   constructor() {
     super();
   }
+
   connectedCallback() {
     if (!this.id) this.id = `tabpanel-${tabpanelCounter++}`;
     this.setAttribute("role", "tabpanel");
-    this.setAttribute("tabindex", "0");
+
+    // Если нужно сделать панель фокусируемой
+    if (this.hasAttribute("focusable")) {
+      this.setAttribute("tabindex", "0");
+    }
   }
 }
-
 customElements.define("mv-tabpanel", Tabpanel);

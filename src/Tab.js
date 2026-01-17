@@ -8,21 +8,22 @@ export default class Tab extends HTMLElement {
   constructor() {
     super();
   }
+
   connectedCallback() {
     if (!this.id) this.id = `tab-${tabCounter++}`;
     this.setAttribute("role", "tab");
-    this.setAttribute("tabindex", "-1");
-    this.setAttribute("aria-selected", "false");
+    this.setAttribute("aria-selected", this.selected);
+    this.setAttribute("tabindex", this.selected ? "0" : "-1");
   }
+
   attributeChangedCallback() {
-    const value = this.hasAttribute("selected");
+    const value = this.selected;
     this.setAttribute("aria-selected", value);
-    this.setAttribute("tabindex", value ? 0 : -1);
+    this.setAttribute("tabindex", value ? "0" : "-1");
   }
 
   set selected(value) {
-    value = Boolean(value);
-    if (value) this.setAttribute("selected", "");
+    if (Boolean(value)) this.setAttribute("selected", "");
     else this.removeAttribute("selected");
   }
 
